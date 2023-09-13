@@ -139,6 +139,7 @@ let destructingData = () => {
     const mainBoardData = computerArray[3];
     console.log(`${cpuData}`);
 
+      //destructing array
     const [cpuData3, ramData34, ramData3, hddData3, mainBoardData3] = computerArray;
     console.log(`${cpuData3}`);
 
@@ -150,8 +151,6 @@ let destructingData = () => {
     }
     const { name, surname } = dataNumber
     console.log(`${name}`);
-
-
 }
 destructingData()
 
