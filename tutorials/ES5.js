@@ -42,6 +42,10 @@ let tempArray = () => {
     }).forEach((value, index, array) => {
         document.writeln(`${value}`)
     });
+
+   
 }
 
 tempArray()
+
+ // bind
