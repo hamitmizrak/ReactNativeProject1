@@ -10,7 +10,6 @@ import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 // CLASS
 export default class ButtonCounter extends Component {
 
-
   // STATE
   state = {
     counter: 0,
