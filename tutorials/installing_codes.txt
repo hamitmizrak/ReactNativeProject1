@@ -1,0 +1,11 @@
+
+
+npx create-expo-app reactnativeproject1
+cd reactnativeproject1
+npx expo start
+npx expo start --port=8084
+npx expo start --android 
+
+--------------------------------------------
+
+npm install @react-navigation/native

@@ -8,6 +8,7 @@ export default function App() {
       <Text>Merhabalar</Text>
       <StatusBar style="auto" />
     </View>
+
   );
 }
 
