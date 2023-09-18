@@ -1,6 +1,9 @@
 npx create-expo-app reactnativeproject1
 cd reactnativeproject1
+
 npx expo start
+a 
+RR
 npx expo start --port=8084
 npx expo start --android 
 
@@ -12,6 +15,7 @@ NPM
 // Router
 npm install react-native-router-flux --save
 
+// node_modules deleted => npm install
 
 ###########################################
 ###########################################
@@ -21,8 +25,8 @@ Farid FArJat
 // flex-end: sağ
 // center
 flex: 1,
-alignItems: 'center',     // satır düzleminde
-justifyContent: 'center', // sutun düzleminde
+alignItems: 'center',     // satır düzleminde (X)
+justifyContent: 'center', // sutun düzleminde (Y)
 
   container: {
     // flex-start:sol
@@ -57,4 +61,12 @@ justifyContent: 'center', // sutun düzleminde
     marginTop: 12,
   }
 
-  ###########################################
+###########################################
+
+<Router>
+    <Scene key="root">
+    <Scene key="counter" component={ButtonCounter} title="Button Counter" initial={true} />
+    </Scene>
+</Router>
+
+###########################################
