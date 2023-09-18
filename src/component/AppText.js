@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 //FUNCTION
 export default function AppText() {
   return (
     <View style={styles.container}>
-      <Text>Merhabalar</Text>
+      <Text>Merhabalar Nasılsın</Text>
       <StatusBar style="auto" />
+      {/* <Button title='Geri' onPress={()=> navigation.goBack()}/> */}
     </View>
   );
 }

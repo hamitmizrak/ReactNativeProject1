@@ -13,7 +13,8 @@ Reload : RR tuşuna basmak
 --------------------------------------------
 NPM
 // Router
-npm install react-native-router-flux --save
+npm install @react-navigation/native @react-navigation/native-stack
+npx expo install react-native-screens react-native-safe-area-context
 
 // node_modules deleted => npm install
 
@@ -39,6 +40,12 @@ justifyContent: 'center', // sutun düzleminde (Y)
 
   },
 
+    justView:{
+      color: "blue",
+      fontSize: 20,
+      marginTop: 12,
+    }
+
   buttonStyle: {
     backgroundColor: 'white',
     borderRadius: 10.5,
@@ -55,18 +62,8 @@ justifyContent: 'center', // sutun düzleminde (Y)
     fontWeight : 'bold',
   },
 
-  justView:{
-    color: "blue",
-    fontSize: 20,
-    marginTop: 12,
-  }
+
 
 ###########################################
-
-<Router>
-    <Scene key="root">
-    <Scene key="counter" component={ButtonCounter} title="Button Counter" initial={true} />
-    </Scene>
-</Router>
 
 ###########################################
