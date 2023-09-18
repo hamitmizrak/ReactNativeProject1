@@ -11,6 +11,7 @@ export default function App() {
   );
 }
 
+// CSS
 const styles = StyleSheet.create({
   container: {
     // flex-start:sol
