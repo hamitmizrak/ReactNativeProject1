@@ -6,6 +6,8 @@ npx expo start
 npx expo start --port=8084
 npx expo start --android 
 
+Reload : RR tuşuna basmak
+
 --------------------------------------------
 // Router
 npm install react-native-router-flux --save
