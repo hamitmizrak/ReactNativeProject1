@@ -12,9 +12,12 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    // flex-start:sol
+    // flex-end: sağ
+    // center
     flex: 1,
-    alignItems: 'flex-start', // satır düzleminde
-    justifyContent: 'flex-start', // sutun düzleminde
-    backgroundColor: '#fff',
+    alignItems: 'center',     // satır düzleminde
+    justifyContent: 'center', // sutun düzleminde
+    backgroundColor: '#fff',      
   },
 });
