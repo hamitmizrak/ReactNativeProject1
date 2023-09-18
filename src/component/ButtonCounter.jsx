@@ -8,7 +8,7 @@ import React, { Component } from 'react'
 import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 
 // CLASS
-export default class ButtonCounter extends Component {
+ class ButtonCounter extends Component {
 
 
   // STATE
@@ -54,3 +54,6 @@ const styles = StyleSheet.create({
 
   }
 });
+
+// EXPORT
+export default ButtonCounter

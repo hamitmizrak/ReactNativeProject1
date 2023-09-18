@@ -11,3 +11,15 @@ Reload : RR tuşuna basmak
 --------------------------------------------
 // Router
 npm install react-native-router-flux --save
+
+
+###########################################
+###########################################
+
+Farid FArJat
+// flex-start:sol
+// flex-end: sağ
+// center
+flex: 1,
+alignItems: 'center',     // satır düzleminde
+justifyContent: 'center', // sutun düzleminde
