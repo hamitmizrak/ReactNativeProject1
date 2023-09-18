@@ -73,7 +73,6 @@ const styles = StyleSheet.create({
     color: "blue",
     fontSize: 20,
     marginTop: 12,
-
   }
 });
 

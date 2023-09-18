@@ -1,21 +1,21 @@
-
-
 npx create-expo-app reactnativeproject1
 cd reactnativeproject1
 npx expo start
 npx expo start --port=8084
 npx expo start --android 
 
+--------------------------------------------
 Reload : RR tuşuna basmak
 
 --------------------------------------------
+NPM
 // Router
 npm install react-native-router-flux --save
 
 
 ###########################################
 ###########################################
-
+// BUTTON AND TEXT
 Farid FArJat
 // flex-start:sol
 // flex-end: sağ
@@ -23,3 +23,38 @@ Farid FArJat
 flex: 1,
 alignItems: 'center',     // satır düzleminde
 justifyContent: 'center', // sutun düzleminde
+
+  container: {
+    // flex-start:sol
+    // flex-end: sağ
+    // center
+    flex: 1,
+    alignItems: 'center',     // satır düzleminde (X)
+    justifyContent: 'center', // sutun düzleminde (Y)
+    backgroundColor: '#000',
+
+  },
+
+  buttonStyle: {
+    backgroundColor: 'white',
+    borderRadius: 10.5,
+    padding: 15,
+    justifyContent: 'center',
+    alignItems: "center",
+  },
+
+  buttonTextStyle: {
+    color: 'black',
+    lineHeight: 25,
+    fontSize: 15,
+    letterSpacing: 0.5,
+    fontWeight : 'bold',
+  },
+
+  justView:{
+    color: "blue",
+    fontSize: 20,
+    marginTop: 12,
+  }
+
+  ###########################################

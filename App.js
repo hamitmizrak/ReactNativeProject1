@@ -1,24 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Router, Scene } from 'react-native-router-flux';
+import ButtonCounter from './src/component/AppFunction';
 
 //FUNCTION
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Merhabalar</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Router>
+      <Scene key="root">
+        <Scene key="counter" component={ButtonCounter} title="Button Counter" initial={true} />
+      </Scene>
+    </Router>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    // flex-start:sol
-    // flex-end: sağ
-    // center
-    flex: 1,
-    alignItems: 'center',     // satır düzleminde
-    justifyContent: 'center', // sutun düzleminde
-    backgroundColor: '#fff',      
-  },
-});
