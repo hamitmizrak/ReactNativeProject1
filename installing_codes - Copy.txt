@@ -1,5 +1,5 @@
-npx create-expo-app CounterApp
-cd CounterApp
+npx create-expo-app Calculator
+cd Calculator
 
 npx expo start
 a 
@@ -65,5 +65,29 @@ justifyContent: 'center', // sutun düzleminde (Y)
 
 
 ###########################################
+
+// CREATE
+// Create Native Stack
+const Stack = createNativeStackNavigator();
+
+//FUNCTION
+// 1.YOL
+// const App = () => { }
+// 2.YOL
+ function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+       <Stack.Screen name="MyProfile" component={ProfileScreen} options={{ title: "Profile Alanı" }} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+// SAYFALAR
+// ProfileScreen
+const ProfileScreen = ({ navigation,route }) => {
+  return <Text> Profilime sayfama Hoş geldiniz {route.params.name}  </Text>
+}
 
 ###########################################
