@@ -22,19 +22,19 @@ class ButtonCounter extends Component {
     });
   };
 
-   // counter Minus (+)
-   counterMinus = () => {
+  // counterMinus (+)
+  counterMinus = () => {
     this.setState({
-      counter: this.state.counter + 1, // X++
+      counter: this.state.counter - 1, // X++
     });
   };
 
-     // counter Reset (+)
-     counterReset = () => {
-      this.setState({
-        counter: this.state.counter + 1, // X++
-      });
-    };
+  // counterReset (+)
+  counterReset = () => {
+    this.setState({
+      counter: this.state.counter = 0, // X++
+    });
+  };
 
   // RENDER
   render() {
@@ -42,32 +42,41 @@ class ButtonCounter extends Component {
     // RETURN
     return (
       <View style={styles.container}>
+        {/* BUTTON GROUP */}
         <View>
+          <Text style={styles.textStyle}> Counter: {this.state.counter}</Text>
+        </View>
 
-          {/* BUTTON GROUP */}
-          <View style={styles.buttonGroup}>
-            <Text style={styles.textStyle}> Counter: {this.state.counter}</Text>
-          </View>
-
-          {/* BUTTON (+) */}
-          <View>
+        {/* BUTTON (+) */}
+        <View style={styles.buttonGroup}>
           <TouchableOpacity style={styles.buttonStyle} onPress={this.counterPlus}>
-            <Text style={styles.textStyle}> Counter Artır</Text>
+            <Text style={styles.textStyle}> Counter (+)</Text>
           </TouchableOpacity>
 
           {/* BUTTON (-) */}
           <TouchableOpacity style={styles.buttonStyle} onPress={this.counterMinus}>
-            <Text style={styles.textStyle}> Counter Azalt</Text>
+            <Text style={styles.textStyle}> Counter (-)</Text>
           </TouchableOpacity>
+        </View>
 
+        <View style={styles.buttonGroup}>
           {/* BUTTON (reset) */}
           <TouchableOpacity style={styles.buttonStyle} onPress={this.counterReset}>
             <Text style={styles.textStyle}> Counter Reset</Text>
           </TouchableOpacity>
-          </View>
+        </View>
+
+        <View style={styles.buttonGroup}>
+          {/* BUTTON (reset) */}
+          <TouchableOpacity style={styles.buttonStyle} onPress={this.counterReset}>
+            <Text style={styles.textStyle}> Counter Timer</Text>
+          </TouchableOpacity>
+          {/* BUTTON (reset) */}
+          <TouchableOpacity style={styles.buttonStyle} onPress={this.counterReset}>
+            <Text style={styles.textStyle}> Counter Stop</Text>
+          </TouchableOpacity>
         </View>
       </View>
-
     ) //end return
   } //end render
 } //end class
@@ -83,18 +92,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
   },
 
-  buttonGroup:{
-
+  buttonGroup: {
+    flexDirection: "row"
   },
 
   buttonStyle: {
     backgroundColor: 'white',
-    padding: 5,
+    padding: 2,
     borderRadius: 12.5,
-    justifyContent: 'center',
-    alignItems: 'center'
-
+    height: 40,
+    marginRight: 3,
+    marginBottom: 10
   },
+
   textStyle: {
     color: "blue",
     fontSize: 21,
