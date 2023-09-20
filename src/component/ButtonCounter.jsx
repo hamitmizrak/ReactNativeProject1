@@ -15,12 +15,26 @@ class ButtonCounter extends Component {
     counter: 0,
   }
 
-  // onPress (+)
+  // counterPlus (+)
   counterPlus = () => {
     this.setState({
       counter: this.state.counter + 1, // X++
     });
   };
+
+   // counter Minus (+)
+   counterMinus = () => {
+    this.setState({
+      counter: this.state.counter + 1, // X++
+    });
+  };
+
+     // counter Reset (+)
+     counterReset = () => {
+      this.setState({
+        counter: this.state.counter + 1, // X++
+      });
+    };
 
   // RENDER
   render() {
@@ -42,12 +56,12 @@ class ButtonCounter extends Component {
           </TouchableOpacity>
 
           {/* BUTTON (-) */}
-          <TouchableOpacity style={styles.buttonStyle} onPress={this.counterPlus}>
+          <TouchableOpacity style={styles.buttonStyle} onPress={this.counterMinus}>
             <Text style={styles.textStyle}> Counter Azalt</Text>
           </TouchableOpacity>
 
           {/* BUTTON (reset) */}
-          <TouchableOpacity style={styles.buttonStyle} onPress={this.counterPlus}>
+          <TouchableOpacity style={styles.buttonStyle} onPress={this.counterReset}>
             <Text style={styles.textStyle}> Counter Reset</Text>
           </TouchableOpacity>
           </View>
