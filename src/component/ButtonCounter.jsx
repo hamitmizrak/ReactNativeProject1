@@ -36,6 +36,18 @@ class ButtonCounter extends Component {
     });
   };
 
+  // automatic Counter
+  counterTimer=()=>{
+    this.interval = setInterval(
+      () => this.setState((nextState)=> ({  counter: this.state.counter + 1, })),
+      1000
+    );
+  }
+
+  counterTimerStop=()=>{
+    clearInterval(this.counterTimer)
+  }
+
   // RENDER
   render() {
 
@@ -68,11 +80,11 @@ class ButtonCounter extends Component {
 
         <View style={styles.buttonGroup}>
           {/* BUTTON (reset) */}
-          <TouchableOpacity style={styles.buttonStyle} onPress={this.counterReset}>
+          <TouchableOpacity style={styles.buttonStyle} onPress={this.counterTimer}>
             <Text style={styles.textStyle}> Counter Timer</Text>
           </TouchableOpacity>
           {/* BUTTON (reset) */}
-          <TouchableOpacity style={styles.buttonStyle} onPress={this.counterReset}>
+          <TouchableOpacity style={styles.buttonStyle} onPress={this.counterTimerStop}>
             <Text style={styles.textStyle}> Counter Stop</Text>
           </TouchableOpacity>
         </View>
