@@ -8,15 +8,15 @@ import React, { Component } from 'react'
 import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 
 // CLASS
- class ButtonCounter extends Component {
+class ButtonCounter extends Component {
 
   // STATE
   state = {
     counter: 0,
   }
 
-  // onPress
-  buttonOnClick = () => {
+  // onPress (+)
+  counterPlus = () => {
     this.setState({
       counter: this.state.counter + 1, // X++
     });
@@ -24,17 +24,36 @@ import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 
   // RENDER
   render() {
+
     // RETURN
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={styles.buttonStyle} onPress={this.buttonOnClick}>
-          <Text> Counter Artır</Text>
-        </TouchableOpacity>
-
         <View>
-          <Text> Counter: {this.state.counter}</Text>
+
+          {/* BUTTON GROUP */}
+          <View style={styles.buttonGroup}>
+            <Text style={styles.textStyle}> Counter: {this.state.counter}</Text>
+          </View>
+
+          {/* BUTTON (+) */}
+          <View>
+          <TouchableOpacity style={styles.buttonStyle} onPress={this.counterPlus}>
+            <Text style={styles.textStyle}> Counter Artır</Text>
+          </TouchableOpacity>
+
+          {/* BUTTON (-) */}
+          <TouchableOpacity style={styles.buttonStyle} onPress={this.counterPlus}>
+            <Text style={styles.textStyle}> Counter Azalt</Text>
+          </TouchableOpacity>
+
+          {/* BUTTON (reset) */}
+          <TouchableOpacity style={styles.buttonStyle} onPress={this.counterPlus}>
+            <Text style={styles.textStyle}> Counter Reset</Text>
+          </TouchableOpacity>
+          </View>
         </View>
       </View>
+
     ) //end return
   } //end render
 } //end class
@@ -45,12 +64,27 @@ const styles = StyleSheet.create({
     // flex-end: sağ
     // center
     flex: 1,
-    alignItems: 'center',     // satır düzleminde
-    justifyContent: 'center', // sutun düzleminde
-    backgroundColor: '#fff',
+    alignItems: 'center',     // satır düzleminde (X)
+    justifyContent: 'center', // sutun düzleminde (Y)
+    backgroundColor: '#000',
   },
-  buttonStyle: {
 
+  buttonGroup:{
+
+  },
+
+  buttonStyle: {
+    backgroundColor: 'white',
+    padding: 5,
+    borderRadius: 12.5,
+    justifyContent: 'center',
+    alignItems: 'center'
+
+  },
+  textStyle: {
+    color: "blue",
+    fontSize: 21,
+    marginBottom: 10
   }
 });
 
