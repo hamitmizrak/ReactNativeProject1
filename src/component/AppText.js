@@ -5,7 +5,7 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 export default function AppText() {
   return (
     <View style={styles.container}>
-      <Text>Merhabalar Nasılsın</Text>
+      <Text>Ben App Textim</Text>
       <StatusBar style="auto" />
       {/* <Button title='Geri' onPress={()=> navigation.goBack()}/> */}
     </View>
