@@ -36,7 +36,6 @@ class ButtonCounter extends Component {
     });
   };
 
-
   // RENDER
   render() {
 
@@ -71,6 +70,7 @@ class ButtonCounter extends Component {
   } //end render
 } //end class
 
+// CSS
 const styles = StyleSheet.create({
   container: {
     // flex-start:sol
